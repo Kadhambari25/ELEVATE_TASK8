@@ -1,0 +1,38 @@
+-- task 8
+-- stored procedure(with parameter and conditional logic)
+use carrental;
+DELIMITER //
+CREATE PROCEDURE CalculateRentalCost(
+    IN p_Days INT,
+    OUT p_TotalCost DECIMAL(10,2)
+)
+BEGIN
+    -- Conditional logic: discounted rate if rented 7 or more days
+    IF p_Days >= 7 THEN
+        SET p_TotalCost = p_Days * 900; 
+    ELSE
+        SET p_TotalCost = p_Days * 1000; 
+    END IF;
+END //
+DELIMITER ;
+
+-- Test
+CALL CalculateRentalCost(10, @cost);
+SELECT @cost AS Total_Cost;
+
+-- function(with parameter and conditional logic)
+DELIMITER //
+CREATE FUNCTION CheckCarAvailability(p_IsAvailable BOOLEAN)
+RETURNS VARCHAR(20)
+DETERMINISTIC
+BEGIN
+    IF p_IsAvailable = TRUE THEN
+        RETURN 'Available';
+    ELSE
+        RETURN 'Not Available';
+    END IF;
+END //
+DELIMITER ;
+
+-- Test
+SELECT CheckCarAvailability(TRUE) AS Car_Status;
