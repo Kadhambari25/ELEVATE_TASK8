@@ -8,6 +8,7 @@ To calculate total rental cost based on the number of rental days.
   * Otherwise → regular rate of ₹1000 per day
 
 **Output screenshot:**
+
 <img width="655" height="175" alt="image" src="https://github.com/user-attachments/assets/7042a197-5073-4956-8ab8-01c4964e3b8a" />
 
 
@@ -19,12 +20,5 @@ To check if a car is available.
   * FALSE → 'Not Available'
 
 **Output screenshot:**
+
 <img width="716" height="210" alt="image" src="https://github.com/user-attachments/assets/2b7e178c-c149-44da-a4d7-e7f0e11862a7" />
-
-
-
----
-
-If you want, I can also make a **slightly longer version with easier wording and headings** so it looks perfect for GitHub README with screenshots. Do you want me to do that?
-
-
